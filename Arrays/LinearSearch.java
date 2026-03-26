@@ -1,50 +1,35 @@
 public class LinearSearch {
 
-    // Method 1: Linear Search for integer arrays
-    public static int linearSearch(int[] numbers, int key) {
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == key) {
-                return i; // Key found, return index
+    // search method for integers
+    public static int search(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i;
             }
         }
-        return -1; // Key not found
+        return -1;
     }
 
-    // Method 2: Linear Search for String arrays (Case-Insensitive)
-    public static int linearSearch(String[] items, String key) {
-        for (int i = 0; i < items.length; i++) {
-            if (items[i].equalsIgnoreCase(key)) { 
-                return i; // String found
+    // overloaded search method for strings
+    public static int search(String[] arr, String target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equalsIgnoreCase(target)) {
+                return i;
             }
         }
-        return -1; // String not found
+        return -1;
     }
 
     public static void main(String[] args) {
         
-        // --- Test Case 1: Integer Array ---
-        int[] numbers = {2, 4, 6, 8, 10, 12, 14, 16};
-        int intKey = 10;
-        int intIndex = linearSearch(numbers, intKey);
+        // testing int array
+        int[] nums = {2, 4, 6, 8, 10, 12, 14, 16};
+        int targetInt = 10;
+        System.out.println("Integer target found at index: " + search(nums, targetInt));
 
-        System.out.println("--- Integer Linear Search ---");
-        if (intIndex == -1) {
-            System.out.println("Key " + intKey + " is Not Found");
-        } else {
-            System.out.println("Key " + intKey + " is at index: " + intIndex);
-        }
-
-        // --- Test Case 2: String Array ---
-        String[] menu = {"Fries 🍟", "Burger 🍔", "Sandwich 🥪", "Samosa"};
-        String stringKey = "samosa";
-        int stringIndex = linearSearch(menu, stringKey);
-
-        System.out.println("\n--- String Linear Search ---");
-        if (stringIndex == -1) {
-            System.out.println("Item Not Found in Menu");
-        } else {
-            System.out.println("Item found at index: " + stringIndex);
-            System.out.println("You selected: " + menu[stringIndex]);
-        }
+        // testing string array
+        String[] menu = {"Fries", "Burger", "Sandwich", "Samosa"};
+        String targetStr = "Samosa";
+        System.out.println("String target found at index: " + search(menu, targetStr));
     }
 }
