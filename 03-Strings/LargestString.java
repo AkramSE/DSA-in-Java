@@ -2,7 +2,7 @@ public class LargestString {
 
     public static void main(String[] args) {
         // Finding the lexicographically largest string
-        String[] fruits={"Apple 🍎", "Banana 🍌", "Mango 🥭"};
+        String[] fruits={"Apple ", "Banana ", "Mango "};
         String largest=fruits[0];
         
         for(int i=1; i<fruits.length; i++) {
