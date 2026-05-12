@@ -30,8 +30,8 @@ public class CountingSort {
     }
     public static void main(String[] args) {
         int[] arr = {5, 4, 1, 3, 2, 4, 1}; 
-        System.out.println("Original Array: " + Arrays.toString(arr));
+        System.out.println("Original Array: " +Arrays.toString(arr));
         sort(arr);
-        System.out.println("Sorted Array:   " + Arrays.toString(arr));
+        System.out.println("Sorted Array:   " +Arrays.toString(arr));
     }
 }
